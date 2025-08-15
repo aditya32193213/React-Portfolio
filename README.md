@@ -27,4 +27,4 @@ A modern and responsive personal portfolio website built with **ReactJS**, **Boo
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/username/React-Portfolio.git
+git clone https://github.com/aditya32193213/React-Portfolio.git

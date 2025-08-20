@@ -46,7 +46,7 @@ const Skills = () => {
                 <div>
                     <Card className="focus mb-2">
                         <Card.Body>
-                            <Card.Title className="text-center  card-title">Frameworks</Card.Title>
+                            <Card.Title className="text-center  card-title">Frameworks & Libraries</Card.Title>
                             <hr />
                             <Card.Text className="card-text d-flex justify-content-start flex-column">
                                 {skills.frameworks.map((skill, index) => (
@@ -84,7 +84,25 @@ const Skills = () => {
                             <Card.Title className="text-center  card-title">Scripting Languages</Card.Title>
                             <hr />
                             <Card.Text className="card-text d-flex justify-content-start flex-column">
-                                {skills.frontend.map((skill, index) => (
+                                {skills.scriptlang.map((skill, index) => (
+                                    <span key={index}>
+                                        <a className="text-dark text-decoration-none" href={skill.link} target="_blank" rel="noopener noreferrer">
+                                            <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image> {skill.skillName}
+                                        </a>
+                                    </span>
+                                ))}
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
+
+                <div>
+                    <Card className="focus mb-2">
+                        <Card.Body>
+                            <Card.Title className="text-center  card-title">Supporting Languages</Card.Title>
+                            <hr />
+                            <Card.Text className="card-text d-flex justify-content-start flex-column">
+                                {skills.support.map((skill, index) => (
                                     <span key={index}>
                                         <a className="text-dark text-decoration-none" href={skill.link} target="_blank" rel="noopener noreferrer">
                                             <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image> {skill.skillName}

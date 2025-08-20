@@ -19,48 +19,13 @@ import L_CPLUSLANG from "../../assets/img/skills/C++_Logo.png"
 import L_PYTHON from "../../assets/img/skills/python.svg"
 
 export const skills = {
-    frontend: [
-      {
-        link: "https://en.wikipedia.org/wiki/HTML5",
-        imgAltText: "HTML 5",
-        imgSrc: L_HTML5,
-        skillName: "HTML5",
-      },
-      {
-        link: "https://medium.com/beginners-guide-to-mobile-web-development/whats-new-in-css-3-dcd7fa6122e1",
-        imgAltText: "CSS 3",
-        imgSrc: L_CSS3,
-        skillName: "CSS3",
-      },
+    scriptlang: [
+      
       {
         link: "https://www.javascript.com/",
         imgAltText: "JavaScript",
         imgSrc: L_JAVASCRIPT,
         skillName: "JavaScript",
-      },
-      {
-        link: "https://reactjs.org/",
-        imgAltText: "React JS",
-        imgSrc: L_REACT,
-        skillName: "React JS",
-      },
-      {
-        link: "https://redux.js.org/",
-        imgAltText: "Redux",
-        imgSrc: L_REDUX,
-        skillName: "Redux",
-      },
-      {
-        link: "https://www.c-language.org/",
-        imgAltText: "C",
-        imgSrc: L_CLANG,
-        skillName: "C",
-      },
-      {
-        link: "https://isocpp.org/",
-        imgAltText: "C++",
-        imgSrc: L_CPLUSLANG,
-        skillName: "C++",
       },
       {
         link: "https://www.python.org/",
@@ -103,6 +68,18 @@ export const skills = {
             imgSrc: L_TAILWIND,
             skillName: "Tailwind CSS",
           },
+          {
+            link: "https://reactjs.org/",
+            imgAltText: "React JS",
+            imgSrc: L_REACT,
+            skillName: "React JS",
+          },
+          {
+            link: "https://redux.js.org/",
+            imgAltText: "Redux",
+            imgSrc: L_REDUX,
+            skillName: "Redux",
+      },
           
           
     ],
@@ -150,4 +127,33 @@ export const skills = {
         skillName: "GIT",
       },
     ],
+    support :[
+      {
+        link: "https://en.wikipedia.org/wiki/HTML5",
+        imgAltText: "HTML 5",
+        imgSrc: L_HTML5,
+        skillName: "HTML5",
+      },
+      {
+        link: "https://medium.com/beginners-guide-to-mobile-web-development/whats-new-in-css-3-dcd7fa6122e1",
+        imgAltText: "CSS 3",
+        imgSrc: L_CSS3,
+        skillName: "CSS3",
+      }
+      ,
+      {
+        link: "https://www.c-language.org/",
+        imgAltText: "C",
+        imgSrc: L_CLANG,
+        skillName: "C",
+      },
+      {
+        link: "https://isocpp.org/",
+        imgAltText: "C++",
+        imgSrc: L_CPLUSLANG,
+        skillName: "C++",
+      },
+
+
+    ]
   };

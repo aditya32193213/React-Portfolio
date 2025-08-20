@@ -14,11 +14,12 @@ const Contact = () => {
         <Row>
           <Col className="d-flex justify-content-center flex-wrap">
             <div className="m-2">
-              <a href="mailto:aditya32193213@gmail.com" target="_blank" rel="noopener noreferrer">
+            <a href="mailto:aditya32193213@gmail.com">
                 <Button variant="outline-danger" title="aditya32193213@gmail.com">
                   <i className="fas fa-envelope-square"></i> Email Me
                 </Button>
-              </a>
+            </a>
+
             </div>
             <div className="m-2">
             <a href="https://www.linkedin.com/in/aditya-487208b8/"  target="_blank" rel="noopener noreferrer">
@@ -35,13 +36,7 @@ const Contact = () => {
                 </Button>
               </a>
             </div>
-            {/* <div className="m-2">
-              <a href="https://medium.com/@adibaabid" target="_blank" rel="noopener noreferrer">
-                <Button id="medium-btn" variant="outline-info" title="Lets write together!">
-                <i class="fab fa-youtube"></i> Medium
-                </Button>
-              </a>
-            </div> */}
+            
             <div className="m-2">
               <a href="https://x.com/aditya32193213" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline-info" title="Tweets are welcomed!">

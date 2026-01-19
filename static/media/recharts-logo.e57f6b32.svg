@@ -1,0 +1,18 @@
+<svg id="recharts-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="recharts-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#22D3EE"/>
+                        <stop offset="100%" style="stop-color:#3B82F6"/>
+                    </linearGradient>
+                </defs>
+                <rect width="200" height="200" fill="url(#recharts-gradient)" rx="20"/>
+                <path d="M50 140 L70 120 L90 110 L110 90 L130 100 L150 70" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="50" cy="140" r="6" fill="white"/>
+                <circle cx="70" cy="120" r="6" fill="white"/>
+                <circle cx="90" cy="110" r="6" fill="white"/>
+                <circle cx="110" cy="90" r="6" fill="white"/>
+                <circle cx="130" cy="100" r="6" fill="white"/>
+                <circle cx="150" cy="70" r="6" fill="white"/>
+                <rect x="40" y="145" width="120" height="2" fill="white" opacity="0.5"/>
+                <rect x="38" y="65" width="2" height="82" fill="white" opacity="0.5"/>
+            </svg>

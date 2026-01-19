@@ -1,27 +1,179 @@
 .about {
-    background-color: transparent;
-    font-size: 1.1em;
-    font-family:"Lato", sans-serif; 
-    font-style: bold italic;
-  }
-  
-  .profile {
-    max-width: 25em;
+  background-color: transparent;
+  font-size: 1.1em;
+  font-family: "Lato", sans-serif;
+}
+
+/* Title */
+.about h1 {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.about h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+/* Profile image */
+.profile {
+  max-width: 25em;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+  transition: 0.3s ease;
+}
+
+.profile:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 80px rgba(102, 126, 234, 0.4);
+}
+
+/* Card */
+.my-details {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.85)
+  );
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* About text */
+.about-text {
+  line-height: 1.8;
+  color: #2d3748;
+  margin-bottom: 2rem;
+}
+
+/* ===============================
+   BUTTON LAYOUT - FINAL FIX
+   =============================== */
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* FIXED: All buttons identical styling */
+.about-btn {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+  border-width: 2px;
+  border-style: solid;
+  background-color: transparent;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Lift on hover - same for all */
+.about-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Let's Talk - Purple gradient */
+.about-btn.btn-outline-primary {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.about-btn.btn-outline-primary:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+/* Resume - Green */
+.about-btn.btn-outline-success {
+  border-color: #48bb78;
+  color: #48bb78;
+}
+
+.about-btn.btn-outline-success:hover {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+/* GitHub - Purple gradient (FIXED to match theme) */
+/* GitHub – FIXED: match portfolio theme */
+/* GitHub – FINAL FIX (visible text, perfect contrast) */
+.about-btn.btn-outline-dark {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.08);
+
+  /* 🔥 Force readable text */
+  color: #667eea !important;
+}
+
+.about-btn.btn-outline-dark:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #ffffff !important;
+  border-color: transparent;
+}
+
+/* LinkedIn - Blue */
+.about-btn.btn-outline-info {
+  border-color: #0077b5;
+  color: #0077b5;
+}
+
+.about-btn.btn-outline-info:hover {
+  background: linear-gradient(135deg, #0077b5, #005582);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 576px) {
+  .button-container {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 
-  
+  .about-btn {
+    font-size: 0.8rem;
+    height: 44px;
+  }
+}
+
+@media (max-width: 786px) {
   .my-details {
-    background-color: rgba(255, 255, 255, 0.747);
-    margin-right:-100px;
+    padding: 1.5rem;
   }
-  @media only screen and (max-width: 786px){
-  .font-details{
-    font-size: 2rem !important;
-  }
-  .my-details{
-    margin-right: 0;
-  }
-  .profile{
-    max-width: 15em;
+
+  .about-text {
+    font-size: 0.95rem;
   }
 }

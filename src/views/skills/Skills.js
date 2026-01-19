@@ -16,11 +16,22 @@ const Skills = () => {
                 <div>
                     <Card className="focus mb-2">
                         <Card.Body>
-                            <Card.Title className="text-center  card-title">Version Control</Card.Title>
+                            <Card.Title className="text-center card-title">Version Control</Card.Title>
                             <hr />
                             <Card.Text className="card-text d-flex justify-content-start flex-column">
-                                <a className="text-dark text-decoration-none" href={skills.versionControl[0].link} target="_blank" rel="noopener noreferrer">
-                                    <Image src={skills.versionControl[0].imgSrc} alt={skills.versionControl[0].imgAltText} rounded className="image-style m-1"></Image> {skills.versionControl[0].skillName}
+                                <a 
+                                    className="text-dark text-decoration-none" 
+                                    href={skills.versionControl[0].link} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    <Image 
+                                        src={skills.versionControl[0].imgSrc} 
+                                        alt={skills.versionControl[0].imgAltText} 
+                                        rounded 
+                                        className="image-style m-1"
+                                    />
+                                    {skills.versionControl[0].skillName}
                                 </a>
                             </Card.Text>
                         </Card.Body>
@@ -28,15 +39,25 @@ const Skills = () => {
 
                     <Card className="focus mb-2">
                         <Card.Body>
-                            <Card.Title className="text-center  card-title">Database</Card.Title>
+                            <Card.Title className="text-center card-title">Database</Card.Title>
                             <hr />
                             <Card.Text className="card-text d-flex justify-content-start flex-column">
                                 {skills.databases.map((skill, index) => (
-                                    <span key={index}>
-                                        <a className="text-dark text-decoration-none" href={skill.link} target="_blank" rel="noopener noreferrer">
-                                            <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image> {skill.skillName}
-                                        </a>
-                                    </span>
+                                    <a 
+                                        key={index}
+                                        className="text-dark text-decoration-none" 
+                                        href={skill.link} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Image 
+                                            src={skill.imgSrc} 
+                                            alt={skill.imgAltText} 
+                                            rounded 
+                                            className="image-style m-1"
+                                        />
+                                        {skill.skillName}
+                                    </a>
                                 ))}
                             </Card.Text>
                         </Card.Body>
@@ -46,32 +67,54 @@ const Skills = () => {
                 <div>
                     <Card className="focus mb-2">
                         <Card.Body>
-                            <Card.Title className="text-center  card-title">Frameworks & Libraries</Card.Title>
+                            <Card.Title className="text-center card-title">Frameworks & Libraries</Card.Title>
                             <hr />
                             <Card.Text className="card-text d-flex justify-content-start flex-column">
                                 {skills.frameworks.map((skill, index) => (
-                                    <span key={index}>
-                                        <a className="text-dark text-decoration-none" href={skill.link} target="_blank" rel="noopener noreferrer">
-                                            <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image> {skill.skillName}
-                                        </a>
-                                    </span>
+                                    <a 
+                                        key={index}
+                                        className="text-dark text-decoration-none" 
+                                        href={skill.link} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Image 
+                                            src={skill.imgSrc} 
+                                            alt={skill.imgAltText} 
+                                            rounded 
+                                            className="image-style m-1"
+                                        />
+                                        {skill.skillName}
+                                    </a>
                                 ))}
                             </Card.Text>
                         </Card.Body>
                     </Card>
                 </div>
+
+                {/* FIXED: Hosting Platform - Now uses same structure as other cards */}
                 <div>
                     <Card className="focus mb-2">
                         <Card.Body>
-                            <Card.Title className="text-center  card-title">Hosting Platform</Card.Title>
+                            <Card.Title className="text-center card-title">Hosting Platform</Card.Title>
                             <hr />
                             <Card.Text className="card-text d-flex justify-content-start flex-column">
                                 {skills.hostingPlatforms.map((skill, index) => (
-                                    <span key={index}>
-                                        <a className="text-dark text-decoration-none" href={skill.link} target="_blank" rel="noopener noreferrer">
-                                            <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image> {skill.skillName}
-                                        </a>
-                                    </span>
+                                    <a 
+                                        key={index}
+                                        className="text-dark text-decoration-none" 
+                                        href={skill.link} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Image 
+                                            src={skill.imgSrc} 
+                                            alt={skill.imgAltText} 
+                                            rounded 
+                                            className="image-style m-1"
+                                        />
+                                        {skill.skillName}
+                                    </a>
                                 ))}
                             </Card.Text>
                         </Card.Body>
@@ -81,15 +124,25 @@ const Skills = () => {
                 <div>
                     <Card className="focus mb-2">
                         <Card.Body>
-                            <Card.Title className="text-center  card-title">Scripting Languages</Card.Title>
+                            <Card.Title className="text-center card-title">Scripting Languages</Card.Title>
                             <hr />
                             <Card.Text className="card-text d-flex justify-content-start flex-column">
                                 {skills.scriptlang.map((skill, index) => (
-                                    <span key={index}>
-                                        <a className="text-dark text-decoration-none" href={skill.link} target="_blank" rel="noopener noreferrer">
-                                            <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image> {skill.skillName}
-                                        </a>
-                                    </span>
+                                    <a 
+                                        key={index}
+                                        className="text-dark text-decoration-none" 
+                                        href={skill.link} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Image 
+                                            src={skill.imgSrc} 
+                                            alt={skill.imgAltText} 
+                                            rounded 
+                                            className="image-style m-1"
+                                        />
+                                        {skill.skillName}
+                                    </a>
                                 ))}
                             </Card.Text>
                         </Card.Body>
@@ -99,15 +152,25 @@ const Skills = () => {
                 <div>
                     <Card className="focus mb-2">
                         <Card.Body>
-                            <Card.Title className="text-center  card-title">Supporting Languages</Card.Title>
+                            <Card.Title className="text-center card-title">Supporting Languages</Card.Title>
                             <hr />
                             <Card.Text className="card-text d-flex justify-content-start flex-column">
                                 {skills.support.map((skill, index) => (
-                                    <span key={index}>
-                                        <a className="text-dark text-decoration-none" href={skill.link} target="_blank" rel="noopener noreferrer">
-                                            <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image> {skill.skillName}
-                                        </a>
-                                    </span>
+                                    <a 
+                                        key={index}
+                                        className="text-dark text-decoration-none" 
+                                        href={skill.link} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Image 
+                                            src={skill.imgSrc} 
+                                            alt={skill.imgAltText} 
+                                            rounded 
+                                            className="image-style m-1"
+                                        />
+                                        {skill.skillName}
+                                    </a>
                                 ))}
                             </Card.Text>
                         </Card.Body>

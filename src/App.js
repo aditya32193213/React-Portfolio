@@ -35,32 +35,23 @@ function App() {
           </div>
         </Parallax>
       </div>
+      
+      {/* FIXED: Removed extra hr elements and spacing */}
       <div>
-        <div>
-          <Container className="container-box rounded">
-            <Fade right duration={2000}>
-              <Skills />
-            </Fade>
-          </Container>
-        </div>
+        <Container className="container-box rounded">
+          <Fade right duration={2000}>
+            <Skills />
+          </Fade>
+        </Container>
+      </div>
 
-        <div>
-          <Container className="container-box rounded">
-            <Slide bottom duration={1000}>
-              <hr />
-              <Projects />
-            </Slide>
-          </Container>
-        </div>
-
-        <div>
-          <Container className="container-box rounded">
-            <Slide left duration={2000}>
-              <hr />
-              {/* <Blog /> */}
-            </Slide>
-          </Container>
-        </div>
+      {/* FIXED: Removed hr between Skills and Projects - reduces spacing */}
+      <div>
+        <Container className="container-box rounded">
+          <Slide bottom duration={1000}>
+            <Projects />
+          </Slide>
+        </Container>
       </div>
 
       <div>
@@ -71,6 +62,7 @@ function App() {
           </Fade>
         </Container>
       </div>
+      
       <hr />
       <Footer />
     </div>

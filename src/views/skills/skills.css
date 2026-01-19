@@ -1,47 +1,221 @@
+/* FIXED: All skill cards have consistent hover effects and styling */
 .focus {
-    transition: transform 0.3s;
-  }
-  
-  .focus:hover {
-    transform: scale(1.05);
-  }
-  
-  .card-title {
-    font-size: 2em;
-    font-weight: 700;
-  }
-  .card-deck{
-    display: flex;
-    justify-content: center;
-    flex-flow: nowrap;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-.card-deck .card{
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.focus:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 50px rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.focus .card-body {
+  padding: 2rem;
+  background: transparent;
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.card-deck {
+  display: flex;
+  justify-content: center;
+  flex-flow: nowrap;
+  margin: 0;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.card-deck .card {
   width: 95%;
 }
 
-  @media only screen and (max-width: 786px){
-    .card-deck{
-      /* flex-flow: column;
-      justify-content: center; */
-      margin: 0 90px 0 90px;
-      flex-direction: column;
-    }
+.card-text {
+  line-height: 2;
+}
+
+/* FIXED: All skill links have identical styling */
+.card-text a {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  margin: 6px 0;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  color: #2d3748;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.card-text a:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  transform: translateX(8px);
+  border-color: rgba(102, 126, 234, 0.2);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+}
+
+.card-text a img {
+  margin-right: 12px;
+}
+
+.focus hr {
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.3), transparent);
+  height: 2px;
+  border: none;
+  margin: 1rem 0;
+}
+
+/* FIXED: Hosting Platform button styling - same as other links */
+.hosting-platform-link,
+.card-text a[href*="github.io"],
+.card-text a[href*="netlify"],
+.card-text a[href*="vercel"] {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  margin: 6px 0;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  color: #2d3748;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.hosting-platform-link:hover,
+.card-text a[href*="github.io"]:hover,
+.card-text a[href*="netlify"]:hover,
+.card-text a[href*="vercel"]:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  transform: translateX(8px);
+  border-color: rgba(102, 126, 234, 0.2);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+  color: #2d3748;
+}
+
+@media only screen and (max-width: 786px) {
+  .card-deck {
+    margin: 0 20px;
+    flex-direction: column;
+    gap: 15px;
   }
   
-  .image-style {
-    width: 3em;
+  .focus .card-body {
+    padding: 1.5rem;
   }
   
-  .font-details {
-    font-size: 3em;
-    font-weight: 500;
-    color: #231d5af8;
+  .card-title {
+    font-size: 1.3em;
   }
   
+  .card-text a {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+.image-style {
+  width: 3em;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.card-text a:hover .image-style {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.font-details {
+  font-size: 3em;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+  position: relative;
+  display: inline-block;
+}
+
+.font-details::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.font-details-b {
+  font-size: 3em;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.font-details-b::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.6) 100%);
+  border-radius: 2px;
+}
+
+#skills {
+  position: relative;
+  padding: 3rem 0;
+}
+
+#skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 786px) {
+  .font-details,
   .font-details-b {
-    font-size: 3em;
-    font-weight: 500;
-    color: #ffffff;
+    font-size: 2rem;
   }
+  
+  .font-details::after,
+  .font-details-b::after {
+    width: 60px;
+    bottom: -10px;
+  }
+}

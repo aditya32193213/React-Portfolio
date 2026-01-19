@@ -1,7 +1,104 @@
+/* ============================================
+   ENHANCED FOOTER CSS - Fixed Consistent Styling
+   ============================================ */
+
 .footer-style {
-    background-color: #101018f8;
-    color: #fff;
-    font-size: 1.5em;
-    border: 2px solid #101018f8;
-    border-top-left-radius: 3px;
+  background: linear-gradient(135deg, #101018 0%, #1a1a2e 100%);
+  color: #fff;
+  font-size: 1.5em;
+  border: none;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, #66fcf1, #45a29e, #66fcf1) 1;
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -5px 20px rgba(102, 252, 241, 0.1);
+}
+
+.footer-style::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #66fcf1, transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.footer-style .heart-icon {
+  display: inline-block;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  color: #ff6b6b;
+  filter: drop-shadow(0 0 5px rgba(255, 107, 107, 0.5));
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(1.2); }
+  20%, 40% { transform: scale(1.1); }
+}
+
+.footer-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* FIXED: All footer links now have consistent purple gradient styling */
+.footer-link {
+  color: #66fcf1;
+  text-decoration: none;
+  font-size: 0.7em;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: rgba(102, 252, 241, 0.05);
+  border: 1px solid rgba(102, 252, 241, 0.2);
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #66fcf1, #45a29e);
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #45a29e;
+  transform: translateY(-2px);
+  background: rgba(102, 252, 241, 0.1);
+  border-color: rgba(102, 252, 241, 0.4);
+  box-shadow: 0 4px 15px rgba(102, 252, 241, 0.2);
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
   }
+  
+  .footer-link {
+    font-size: 0.65em;
+  }
+  
+  .footer-style {
+    font-size: 1.2em;
+  }
+}

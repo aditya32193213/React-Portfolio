@@ -1,14 +1,140 @@
-.contact-jumbotron {
-    background-image: url("../../assets/img/background/background.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
+/* Contact Section - Fixed Styling */
+
+.contacts {
+  padding: 3rem 0;
+  background: transparent;
+}
+
+.contacts h1 {
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.contacts h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.6) 100%);
+  border-radius: 2px;
+}
+
+/* FIXED: All contact buttons have identical styling */
+.btn-email,
+.btn-linkedin,
+.btn-github,
+.btn-twitter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  margin: 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid;
+  background-color: transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Email - Red */
+.btn-email {
+  border-color: #e53e3e;
+  color: #e53e3e;
+}
+
+.btn-email:hover {
+  background: linear-gradient(135deg, #e53e3e, #c53030);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(229, 62, 62, 0.3);
+}
+
+/* LinkedIn - Blue */
+.btn-linkedin {
+  border-color: #0077b5;
+  color: #0077b5;
+}
+
+.btn-linkedin:hover {
+  background: linear-gradient(135deg, #0077b5, #005582);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 119, 181, 0.3);
+}
+
+/* GitHub - Purple gradient (matching theme) */
+.btn-github {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.btn-github:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Twitter - Light Blue */
+.btn-twitter {
+  border-color: #1da1f2;
+  color: #1da1f2;
+}
+
+.btn-twitter:hover {
+  background: linear-gradient(135deg, #1da1f2, #0c85d0);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(29, 161, 242, 0.3);
+}
+
+/* Icons inside buttons */
+.btn-email svg,
+.btn-linkedin svg,
+.btn-github svg,
+.btn-twitter svg {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Contact form card */
+.contact-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .btn-email,
+  .btn-linkedin,
+  .btn-github,
+  .btn-twitter {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    margin: 8px 5px;
   }
   
-  #medium-btn {
-    border-color: #383838;
-    color: #383838;
+  .contact-card {
+    padding: 2rem 1.5rem;
   }
-  #medium-btn:hover {
-    background-color: #383838;
-    color: #ffffff;
-  }
+}

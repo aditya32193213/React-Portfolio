@@ -1,0 +1,6 @@
+<svg id="pdf-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="#DC3545" rx="20"/>
+                <path d="M60 50h65l15 15v85H60z" fill="white"/>
+                <path d="M125 50v15h15z" fill="#FFB3BA"/>
+                <text x="100" y="115" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#DC3545" text-anchor="middle">PDF</text>
+            </svg>

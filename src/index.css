@@ -1,37 +1,125 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ===========================
+   BASE BODY
+   =========================== */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Karla", sans-serif;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#959595+0,0d0d0d+46,010101+50,0a0a0a+53,4e4e4e+76,383838+87,1b1b1b+100;Black+Gloss+Pipe */
-  /* background-image: linear-gradient(
-    -225deg,
-    #22e1ff 0%,
-    #1d8fe1 48%,
-    #625eb1 100%
-  ); */
-  /* background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
- background-blend-mode: normal, lighten, soft-light; */
- background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
- /* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
-  /* Add the blur effect */
 
-  /* Full height */
-  height: 100%;
+  background: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  background-attachment: fixed;
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  position: relative;
+  z-index: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* ===========================
+   DECORATIVE BACKGROUND
+   =========================== */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 20% 50%, rgba(102,126,234,0.1), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(118,75,162,0.1), transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(99,179,237,0.05), transparent 50%);
+}
+
+body::after {
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.15), transparent),
+    radial-gradient(2px 2px at 60% 70%, rgba(255,255,255,0.1), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.1), transparent);
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+:focus-visible {
+  outline: 2px solid rgba(102,126,234,0.6);
+  outline-offset: 2px;
+}
+
+/* ===========================
+   LINKS (NOT BUTTONS)
+   =========================== */
+a {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:not(.btn):hover {
+  color: #764ba2;
+}
+
+/* ===========================
+   BUTTON BASE (NEUTRAL ONLY)
+   =========================== */
+.btn,
+button {
+  background: transparent;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ===========================
+   TYPOGRAPHY
+   =========================== */
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* ===========================
+   MEDIA / REDUCED MOTION
+   =========================== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  body { font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }

@@ -1,0 +1,9 @@
+<svg id="swagger-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="#85EA2D" rx="20"/>
+                <circle cx="100" cy="70" r="20" fill="#173647"/>
+                <path d="M80 100h40v50H80z" fill="#173647"/>
+                <rect x="85" y="110" width="12" height="12" fill="#85EA2D"/>
+                <rect x="103" y="110" width="12" height="12" fill="#85EA2D"/>
+                <rect x="85" y="130" width="12" height="12" fill="#85EA2D"/>
+                <rect x="103" y="130" width="12" height="12" fill="#85EA2D"/>
+            </svg>

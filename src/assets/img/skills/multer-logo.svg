@@ -1,0 +1,6 @@
+<svg id="multer-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="#FF6B6B" rx="20"/>
+                <path d="M100 50l40 30v40l-40 30-40-30V80z" fill="white" opacity="0.9"/>
+                <path d="M100 70l25 20v25l-25 20-25-20V90z" fill="#FFE66D"/>
+                <text x="100" y="110" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#333" text-anchor="middle">M</text>
+            </svg>
